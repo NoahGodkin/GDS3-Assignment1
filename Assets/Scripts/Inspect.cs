@@ -9,12 +9,18 @@ public class Inspect : MonoBehaviour
     public GameObject Background;
     public GameObject AnimalInspect;
 
+    public GameObject OtherAnimal;
+
     private void OnMouseDown()
     {
         Canvas.SetActive(true);
         Background.SetActive(false);
         AnimalInspect.SetActive(true);
-        
+
+        OtherAnimal.SetActive(false);
+
+        ReturnButton.currentAnimal = AnimalInspect;
+
         this.gameObject.SetActive(false);  
     }
 }

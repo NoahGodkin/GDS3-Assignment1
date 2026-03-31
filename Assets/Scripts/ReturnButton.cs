@@ -11,13 +11,19 @@ public class ReturnButton : MonoBehaviour
     public GameObject Penguin;
     public GameObject PenguinInspect;
 
+    public GameObject PolarBear;
+    public GameObject PolarBearInspect;
+
+    public static GameObject currentAnimal;
+
     public void Return()
     {
         Canvas.SetActive(false);
         Background.SetActive(true);
 
         Penguin.SetActive(true);
-        PenguinInspect.SetActive(false);
+        PolarBear.SetActive(true);
+        currentAnimal.SetActive(false);
 
         foreach(GameObject gameObject in Bubble)
         {
@@ -25,5 +31,7 @@ public class ReturnButton : MonoBehaviour
         }
 
         PenguinInspect.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
+
+        PolarBearInspect.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
     }
 }
