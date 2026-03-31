@@ -24,6 +24,6 @@ public class ReturnButton : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        PenguinInspect.transform.rotation = Quaternion.identity;
+        PenguinInspect.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
     }
 }

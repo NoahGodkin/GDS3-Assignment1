@@ -7,13 +7,13 @@ public class Inspect : MonoBehaviour
 
     public GameObject Canvas;
     public GameObject Background;
-    public GameObject PenguinInspect;
+    public GameObject AnimalInspect;
 
     private void OnMouseDown()
     {
         Canvas.SetActive(true);
         Background.SetActive(false);
-        PenguinInspect.SetActive(true);
+        AnimalInspect.SetActive(true);
         
         this.gameObject.SetActive(false);  
     }
