@@ -11,6 +11,8 @@ public class Inspect : MonoBehaviour
 
     public GameObject OtherAnimal;
 
+    public GameObject RoomChangeCanvas;
+
     private void OnMouseDown()
     {
         Canvas.SetActive(true);
@@ -21,6 +23,8 @@ public class Inspect : MonoBehaviour
 
         ReturnButton.currentAnimal = AnimalInspect;
 
-        this.gameObject.SetActive(false);  
+        this.gameObject.SetActive(false); 
+        
+        RoomChangeCanvas.SetActive(false);
     }
 }
