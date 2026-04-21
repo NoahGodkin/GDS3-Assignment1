@@ -24,6 +24,8 @@ public class Inspect : MonoBehaviour
         ReturnButton.currentAnimal = AnimalInspect;
 
         this.gameObject.SetActive(false); 
+
+        ReturnButton.currentRoomChangeCanvas = RoomChangeCanvas;
         
         RoomChangeCanvas.SetActive(false);
     }

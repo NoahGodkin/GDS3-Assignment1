@@ -24,4 +24,18 @@ public class clicked : MonoBehaviour
             clickCount = 0;
         }
     }
+
+    void Update()
+    {
+        if (info.activeSelf == false)
+        {
+            return; // won't proceed from here
+        }
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        {
+            info.SetActive(false);
+        }
+    }
 }

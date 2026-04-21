@@ -16,7 +16,9 @@ public class ReturnButton : MonoBehaviour
 
     public static GameObject currentAnimal;
 
-    public GameObject RoomChangeCanvas;
+    public static GameObject currentRoomChangeCanvas;
+
+    //public GameObject RoomChangeCanvas;
 
     public void Return()
     {
@@ -27,7 +29,7 @@ public class ReturnButton : MonoBehaviour
         PolarBear.SetActive(true);
         currentAnimal.SetActive(false);
 
-        RoomChangeCanvas.SetActive(true);
+        currentRoomChangeCanvas.SetActive(true);
 
         foreach(GameObject gameObject in Bubble)
         {

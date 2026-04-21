@@ -3,39 +3,50 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    public GameObject Room1;
-    public GameObject Room2;
-    public GameObject Room3;
+    public GameObject Antarctica;
+    public GameObject AntarcticSea;
+    public GameObject ArcticSea; 
+    public GameObject Arctic;
 
-    //ROOM 1 BUTTONS
-    public void R1RightButton()
+    //ANTARCTICA
+    public void AntarcticaLeftButton()
     {
-        Room1.SetActive(false);
-        Room2.SetActive(true);
-        Room3.SetActive(false);
+        Antarctica.SetActive(false);
+        AntarcticSea.SetActive(true);
     }
 
-    //ROOM 2 BUTTONS
-    public void R2RightButton()
+    //ANTARCTICA SEA
+    public void AntarcticSeaRightButton()
     {
-        Room1.SetActive(false);
-        Room2.SetActive(false);
-        Room3.SetActive(true);
+        Antarctica.SetActive(true);
+        AntarcticSea.SetActive(false);
     }
 
-    public void R2LeftButton()
+    public void AntarcticSeaLeftButton()
     {
-        Room1.SetActive(true);
-        Room2.SetActive(false);
-        Room3.SetActive(false);
+        AntarcticSea.SetActive(false);
+        ArcticSea.SetActive(true);
     }
 
-    //ROOM 3 BUTTONS
-    public void R3LeftButton()
+    //ARCTIC SEA
+
+    public void ArcticSeaRightButton()
     {
-        Room1.SetActive(false);
-        Room2.SetActive(true);
-        Room3.SetActive(false);
+        AntarcticSea.SetActive(true);
+        ArcticSea.SetActive(false);
+    }
+
+    public void ArcticSeaLeftButton()
+    {
+        ArcticSea.SetActive(false);
+        Arctic.SetActive(true);
+    }
+
+    //ARCTIC
+    public void ArcticRightButton()
+    {
+        ArcticSea.SetActive(true);
+        Arctic.SetActive(false);
     }
 }
 
