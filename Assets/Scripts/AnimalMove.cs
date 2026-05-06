@@ -1,23 +1,14 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AnimalMove : MonoBehaviour
 {
-    public Transform Ltarget;
-    public Transform Rtarget;
-    public float speed;
 
-    public void Update()
+    public float speed = 1;
+    public Vector3 target = new Vector3(0, 0, 2);
+
+    private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Ltarget.position, speed * Time.deltaTime);
-
-        if (transform.position == Ltarget.position)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Rtarget.position, speed * Time.deltaTime);
-        }
-
-        if (transform.position == Rtarget.position)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Ltarget.position, speed * Time.deltaTime);
-        }
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); 
     }
 }

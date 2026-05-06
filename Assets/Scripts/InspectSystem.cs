@@ -28,5 +28,7 @@ public class InspectSystem : MonoBehaviour
 
             previousMousePosition = Input.mousePosition;
         }
+
+        //BubbleRect.anchoredPosition = Cam.WorldToScreenPoint(ButtonPos.position);
     }
 }

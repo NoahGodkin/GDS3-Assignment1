@@ -8,7 +8,7 @@ public class ImageChange : MonoBehaviour
     public Sprite Squish;
     public Sprite Normal;
 
-    public void Start()
+    public void OnEnable()
     {
         Image.sprite = Normal;
         StartCoroutine(ImageChanger());

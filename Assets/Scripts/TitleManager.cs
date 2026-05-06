@@ -1,8 +1,12 @@
 using UnityEngine;
 using TMPro;
+using Unity.VectorGraphics;
+using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
+    //public string[] Titles;
+
     public TextMeshProUGUI Title;
 
     public static int RoomNumber;
@@ -14,22 +18,24 @@ public class TitleManager : MonoBehaviour
 
     private void Update()
     {
-        if (RoomNumber == 1)
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentIndex == 3)
         {
             Title.text = "antarctica";
         }
 
-        if (RoomNumber == 2)
+        if (currentIndex == 2)
         {
             Title.text = "antarctic sea";
         }
 
-        if (RoomNumber == 3)
+        if (currentIndex == 1)
         {
             Title.text = "arctic sea";
         }
 
-        if (RoomNumber == 4)
+        if (currentIndex == 0)
         {
             Title.text = "arctic";
         }
