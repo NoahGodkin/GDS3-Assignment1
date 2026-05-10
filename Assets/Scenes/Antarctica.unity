@@ -1073,7 +1073,9 @@ MonoBehaviour:
   AnimalInspect: {fileID: 697335074}
   OtherAnimal: {fileID: 736208128}
   RoomChangeCanvas: {fileID: 455208666}
+  ScanningText: {fileID: 0}
   shutterAnim: {fileID: 878570462}
+  CameraShutter: {fileID: 0}
 --- !u!1 &681124050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1532,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1038991905}
         m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
-        m_MethodName: AntarcticaLeftButton
+        m_MethodName: AntarcticSeaLeftButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2444,6 +2446,7 @@ MonoBehaviour:
   PenguinInspect: {fileID: 918445416}
   PolarBear: {fileID: 662998392}
   PolarBearInspect: {fileID: 697335074}
+  CameraShutter: {fileID: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0

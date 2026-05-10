@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Inspect : MonoBehaviour
@@ -13,9 +15,15 @@ public class Inspect : MonoBehaviour
 
     public GameObject RoomChangeCanvas;
 
-    //ShutterAnimPlay shutterAnimPlay;
+    public GameObject ScanningText;
 
     public Animator shutterAnim;
+    public GameObject CameraShutter;
+
+    //public void Start()
+    //{
+    //    ScanningText.SetActive(false);
+    //}
 
     public void OnMouseDown()
     {
@@ -23,6 +31,7 @@ public class Inspect : MonoBehaviour
 
         StartCoroutine(RoomChange());
 
+        Invoke("scanningTextAppear", 0.5f);
     }
 
     public IEnumerator RoomChange()
@@ -43,6 +52,17 @@ public class Inspect : MonoBehaviour
         ReturnButton.currentRoomChangeCanvas = RoomChangeCanvas;
         
         RoomChangeCanvas.SetActive(false);
+    }
+
+    public void scanningTextAppear()
+    {
+        ScanningText.SetActive(true);
+        Invoke("scanningTextDisappear", 3f);
+    }
+
+    public void scanningTextDisappear()
+    {
+        ScanningText.SetActive(false);
     }
 
     public void shutterAnimP()

@@ -18,8 +18,6 @@ public class ReturnButton : MonoBehaviour
 
     public static GameObject currentRoomChangeCanvas;
 
-    //public GameObject RoomChangeCanvas;
-
     public void Return()
     {
         Canvas.SetActive(false);
