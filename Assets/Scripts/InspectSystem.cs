@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 
 public class InspectSystem : MonoBehaviour
@@ -10,8 +11,9 @@ public class InspectSystem : MonoBehaviour
 
     private Vector3 previousMousePosition;
 
-    void Update()
+    public void Update()
     {
+
         if(Input.GetMouseButtonDown(0))
         {
             previousMousePosition = Input.mousePosition;
@@ -31,4 +33,16 @@ public class InspectSystem : MonoBehaviour
 
         //BubbleRect.anchoredPosition = Cam.WorldToScreenPoint(ButtonPos.position);
     }
+
+    public void Freeze()
+    {
+        rotationSpeed = 0;
+    }
+
+    public void UnFreeze()
+    {
+        rotationSpeed = 100;
+    }
+
+
 }

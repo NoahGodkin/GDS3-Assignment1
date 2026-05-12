@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class AnimalMove : MonoBehaviour
+public class AnimalMoveInspect : MonoBehaviour
 {
 
     public float speed = 1;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class clicked : MonoBehaviour
 {
@@ -13,87 +14,100 @@ public class clicked : MonoBehaviour
     public GameObject info;
     public GameObject animal;
 
-    private Camera mainCamera;
+    public Camera mainCamera;
     private BoxCollider boxCollider;
+
+    InspectSystem inspectSystem;
 
     void Start()
     {
         info.SetActive(false);
         mainCamera = Camera.main;
         boxCollider = GetComponent<BoxCollider>();
+
+        inspectSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<InspectSystem>();
     }
 
     public void OnMouseDown()
     {
         clickCount++;
-        info.SetActive(true); 
+        info.SetActive(true);
+
+        mainCamera.fieldOfView = 20;
+
+        inspectSystem.Freeze();
 
         if (clickCount > 1)
         {
             info.SetActive(false);
+
+            mainCamera.fieldOfView = 60;
+
+            inspectSystem.UnFreeze();
+
             clickCount = 0;
         }
     }
 
-    void Update()
-    {
-        if (info.activeSelf == false)
-        {
-            return; // won't proceed from here
-        }
+    //void Update()
+    //{
+    //    if (info.activeSelf == false)
+    //    {
+    //        return; // won't proceed from here
+    //    }
 
 
 
-        // Sphere cast from the button towards the camera
-        // If the animal blocks the raycast, hide it
+    //    // Sphere cast from the button towards the camera
+    //    // If the animal blocks the raycast, hide it
 
         
-        Vector3 castDirection = -mainCamera.transform.forward;
-        Vector3 boxExtents = new Vector3(boxCollider.size.x/2f, boxCollider.size.y/2f, 0.001f);
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, boxExtents, castDirection);
+    //    Vector3 castDirection = -mainCamera.transform.forward;
+    //    Vector3 boxExtents = new Vector3(boxCollider.size.x/2f, boxCollider.size.y/2f, 0.001f);
+    //    RaycastHit[] hits = Physics.BoxCastAll(transform.position, boxExtents, castDirection);
 
-        if (hits.Length > 0)
-        {
-            bool foundAnimal = false;
-            RaycastHit animalHit = new RaycastHit();
-            foreach (RaycastHit hit in hits)
-            {
-                if (hit.transform == animal.transform)
-                {
-                    foundAnimal = true;
-                    animalHit = hit;
-                }
+    //    if (hits.Length > 0)
+    //    {
+    //        bool foundAnimal = false;
+    //        RaycastHit animalHit = new RaycastHit();
+    //        foreach (RaycastHit hit in hits)
+    //        {
+    //            if (hit.transform == animal.transform)
+    //            {
+    //                foundAnimal = true;
+    //                animalHit = hit;
+    //            }
                     
-                break;
-            }
+    //            break;
+    //        }
 
-            if (foundAnimal)
-            {
-                Bounds b1 = new Bounds(
-                    new Vector3(transform.position.x, transform.position.y, 0), 
-                    new Vector3(boxCollider.size.x, boxCollider.size.y, 0));
-                Bounds b2 = new Bounds(
-                    new Vector3(animalHit.transform.position.x, animalHit.transform.position.y, 0), 
-                    new Vector3(animalHit.collider.bounds.size.x, animalHit.collider.bounds.size.y, 0));
+    //        if (foundAnimal)
+    //        {
+    //            Bounds b1 = new Bounds(
+    //                new Vector3(transform.position.x, transform.position.y, 0), 
+    //                new Vector3(boxCollider.size.x, boxCollider.size.y, 0));
+    //            Bounds b2 = new Bounds(
+    //                new Vector3(animalHit.transform.position.x, animalHit.transform.position.y, 0), 
+    //                new Vector3(animalHit.collider.bounds.size.x, animalHit.collider.bounds.size.y, 0));
 
-                if (b1.min.x <= b2.min.x && b1.max.x >= b2.max.x && b1.min.y <= b2.min.y && b1.max.y >= b2.max.y)
-                {
-                    print("Yep");
-                    if (animalHit.transform.position.z - transform.position.z > 0)
-                        info.SetActive(false);
-                }
-            }          
+    //            if (b1.min.x <= b2.min.x && b1.max.x >= b2.max.x && b1.min.y <= b2.min.y && b1.max.y >= b2.max.y)
+    //            {
+    //                print("Yep");
+    //                if (animalHit.transform.position.z - transform.position.z > 0)
+    //                    info.SetActive(false);
+    //            }
+    //        }          
 
-            //print($"xMin: {b1.min.x >= b2.min.x}, xMax:{b1.max.x <= b2.max.x}, yMin: {b1.min.y >= b2.min.y}, yMax:{b1.max.y <= b2.max.y}");
+    //        //print($"xMin: {b1.min.x >= b2.min.x}, xMax:{b1.max.x <= b2.max.x}, yMin: {b1.min.y >= b2.min.y}, yMax:{b1.max.y <= b2.max.y}");
 
            
          
             
 
             
-        }
+    //    }
 
         
-    }
+    //}
 
 }
