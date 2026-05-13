@@ -8,36 +8,25 @@ public class RoomManager : MonoBehaviour
     TitleManager titleManager;
 
     //ANTARCTICA
-    public void AntarcticaLeftButton()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    //ANTARCTICA SEA
-    public void AntarcticSeaRightButton()
-    {
-        SceneManager.LoadScene(3);
-    }
-
-    public void AntarcticSeaLeftButton()
+    public void ArcticLeftButton()
     {
         SceneManager.LoadScene(1);
     }
 
-    //ARCTIC SEA
+    //OCEAN
 
-    public void ArcticSeaRightButton()
+    public void OceanRightButton()
     {
         SceneManager.LoadScene(2);
     }
 
-    public void ArcticSeaLeftButton()
+    public void OceanLeftButton()
     {
         SceneManager.LoadScene(0);
     }
 
     //ARCTIC
-    public void ArcticRightButton()
+    public void AntarcticaRightButton()
     {
         SceneManager.LoadScene(1);
     }
