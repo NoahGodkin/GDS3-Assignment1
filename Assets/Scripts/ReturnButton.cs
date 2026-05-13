@@ -18,14 +18,29 @@ public class ReturnButton : MonoBehaviour
 
     public static GameObject currentRoomChangeCanvas;
 
+    public GameObject animalInspectRoom;
+    public GameObject sceneRoom;
+
+    public Camera mainCamera;
+
+    public void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
     public void Return()
     {
-        Canvas.SetActive(false);
-        Background.SetActive(true);
+        mainCamera.fieldOfView = 60;
+
+        animalInspectRoom.SetActive(false);
+        sceneRoom.SetActive(true);
+
+        //Canvas.SetActive(false);
+        //Background.SetActive(true);
 
         Penguin.SetActive(true);
         PolarBear.SetActive(true);
-        currentAnimal.SetActive(false);
+        //currentAnimal.SetActive(false);
 
         currentRoomChangeCanvas.SetActive(true);
 

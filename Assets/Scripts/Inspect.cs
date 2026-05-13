@@ -20,6 +20,9 @@ public class Inspect : MonoBehaviour
     public Animator shutterAnim;
     public GameObject CameraShutter;
 
+    public GameObject animalInspectRoom;
+    public GameObject sceneRoom;
+
     //public void Start()
     //{
     //    ScanningText.SetActive(false);
@@ -39,8 +42,11 @@ public class Inspect : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        Canvas.SetActive(true);
-        Background.SetActive(false);
+        animalInspectRoom.SetActive(true);
+        sceneRoom.SetActive(false);
+
+        //Canvas.SetActive(true);
+        //Background.SetActive(false);
         AnimalInspect.SetActive(true);
 
         OtherAnimal.SetActive(false);
