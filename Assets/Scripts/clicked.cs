@@ -14,13 +14,23 @@ public class clicked : MonoBehaviour
     public GameObject info;
     public GameObject animal;
 
+    private Vector3 animalPosition;
+
     public Camera mainCamera;
     private BoxCollider boxCollider;
 
     InspectSystem inspectSystem;
 
+    public float ButtonXcoords;
+    public float ButtonYcoords;
+    public float ButtonZcoords;
+
+    public float ButtonRotation;
+
     void Start()
     {
+        animalPosition = animal.transform.position;
+
         info.SetActive(false);
         mainCamera = Camera.main;
         boxCollider = GetComponent<BoxCollider>();
@@ -35,10 +45,18 @@ public class clicked : MonoBehaviour
 
         mainCamera.fieldOfView = 20;
 
+        animal.transform.position = new Vector3(ButtonXcoords, ButtonYcoords, ButtonZcoords); 
+
+        animal.transform.rotation = Quaternion.Euler(0f, ButtonRotation, 0f);
+
         inspectSystem.Freeze();
 
         if (clickCount > 1)
         {
+            animal.transform.position = animalPosition;
+
+            animal.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
+
             info.SetActive(false);
 
             mainCamera.fieldOfView = 60;

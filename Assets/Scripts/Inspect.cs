@@ -23,10 +23,12 @@ public class Inspect : MonoBehaviour
     public GameObject animalInspectRoom;
     public GameObject sceneRoom;
 
-    //public void Start()
-    //{
-    //    ScanningText.SetActive(false);
-    //}
+    private Vector3 currentAnimalPosition;
+
+    public void Start()
+    {
+        currentAnimalPosition = AnimalInspect.transform.position;
+    }
 
     public void OnMouseDown()
     {
@@ -39,6 +41,7 @@ public class Inspect : MonoBehaviour
 
     public IEnumerator RoomChange()
     {
+        AnimalInspect.transform.position = currentAnimalPosition;
 
         yield return new WaitForSeconds(1f);
 

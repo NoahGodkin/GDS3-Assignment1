@@ -744,6 +744,10 @@ MonoBehaviour:
   info: {fileID: 1869047502}
   animal: {fileID: 1731793407}
   mainCamera: {fileID: 963194227}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
 --- !u!65 &257624197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1031,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3358175663784271224, guid: 750065d5806465a4b8c9658d3f2dd0ca, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9126614638519167897, guid: 750065d5806465a4b8c9658d3f2dd0ca, type: 3}
       propertyPath: m_ProvidesContacts
@@ -1272,6 +1276,10 @@ MonoBehaviour:
   info: {fileID: 1869047502}
   animal: {fileID: 416596025}
   mainCamera: {fileID: 963194227}
+  ButtonXcoords: 0
+  ButtonYcoords: -0.65
+  ButtonZcoords: -5
+  ButtonRotation: -82
 --- !u!65 &492906658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2745,7 +2753,7 @@ MonoBehaviour:
   PolarBearInspect: {fileID: 1731793407}
   animalInspectRoom: {fileID: 5987186}
   sceneRoom: {fileID: 821374493}
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 963194227}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3314,6 +3322,10 @@ MonoBehaviour:
   info: {fileID: 796152097}
   animal: {fileID: 1731793407}
   mainCamera: {fileID: 963194227}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
 --- !u!65 &1199746518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3611,6 +3623,10 @@ MonoBehaviour:
   info: {fileID: 908304740}
   animal: {fileID: 1731793407}
   mainCamera: {fileID: 963194227}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
 --- !u!65 &1404260463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4279,6 +4295,10 @@ MonoBehaviour:
   info: {fileID: 908304740}
   animal: {fileID: 416596025}
   mainCamera: {fileID: 963194227}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: -5
+  ButtonRotation: -128
 --- !u!65 &1678186113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4801,6 +4821,10 @@ MonoBehaviour:
   info: {fileID: 796152097}
   animal: {fileID: 416596025}
   mainCamera: {fileID: 963194227}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: -5
+  ButtonRotation: 74
 --- !u!65 &2098944296
 BoxCollider:
   m_ObjectHideFlags: 0

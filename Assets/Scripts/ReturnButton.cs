@@ -40,7 +40,7 @@ public class ReturnButton : MonoBehaviour
 
         Penguin.SetActive(true);
         PolarBear.SetActive(true);
-        //currentAnimal.SetActive(false);
+        currentAnimal.SetActive(false);
 
         currentRoomChangeCanvas.SetActive(true);
 
