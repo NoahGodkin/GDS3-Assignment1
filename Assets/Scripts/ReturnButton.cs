@@ -44,11 +44,6 @@ public class ReturnButton : MonoBehaviour
 
         currentRoomChangeCanvas.SetActive(true);
 
-        foreach(GameObject gameObject in Bubble)
-        {
-            gameObject.SetActive(false);
-        }
-
         PenguinInspect.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
 
         PolarBearInspect.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);

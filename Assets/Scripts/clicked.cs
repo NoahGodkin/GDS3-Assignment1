@@ -11,7 +11,6 @@ public class clicked : MonoBehaviour
     public float maxDiffX = 0.15f;
     public float maxDiffZ = 0.02f;
 
-    public GameObject info;
     public GameObject animal;
 
     private Vector3 animalPosition;
@@ -27,11 +26,19 @@ public class clicked : MonoBehaviour
 
     public float ButtonRotation;
 
+    public float ButtonScaleX;
+    public float ButtonScaleY;
+    public float ButtonScaleZ;
+
+    public GameObject textInfo;
+
+    public GameObject OtherButton1;
+    public GameObject OtherButton2;
+
     void Start()
     {
         animalPosition = animal.transform.position;
 
-        info.SetActive(false);
         mainCamera = Camera.main;
         boxCollider = GetComponent<BoxCollider>();
 
@@ -41,7 +48,10 @@ public class clicked : MonoBehaviour
     public void OnMouseDown()
     {
         clickCount++;
-        info.SetActive(true);
+        textInfo.SetActive(true);
+
+        OtherButton1.SetActive(false);
+        OtherButton2.SetActive(false);
 
         mainCamera.fieldOfView = 20;
 
@@ -53,11 +63,14 @@ public class clicked : MonoBehaviour
 
         if (clickCount > 1)
         {
+            OtherButton1.SetActive(true);
+            OtherButton2.SetActive(true);
+
             animal.transform.position = animalPosition;
 
             animal.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
 
-            info.SetActive(false);
+            textInfo.SetActive(false);
 
             mainCamera.fieldOfView = 60;
 
