@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arctic.unity
     guid: c30ce635202662a4ea4292d0b4bc71d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Antarctic Sea.unity
     guid: 9520158fcdd5d4b4caba29137b34a56c
   m_configObjects: {}
