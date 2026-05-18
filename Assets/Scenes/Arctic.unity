@@ -202,9 +202,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 428146592}
   animal: {fileID: 763987773}
   mainCamera: {fileID: 1239489549}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &127603625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347,9 +356,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 2012212719}
   animal: {fileID: 538849951}
   mainCamera: {fileID: 1239489549}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &134099646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -596,7 +614,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1924,9 +1942,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 428146592}
   animal: {fileID: 538849951}
   mainCamera: {fileID: 1239489549}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &950158478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2069,9 +2096,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 2012212719}
   animal: {fileID: 763987773}
   mainCamera: {fileID: 1239489549}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &962152771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2644,6 +2680,7 @@ MonoBehaviour:
   Canvas: {fileID: 2023134147}
   Background: {fileID: 603358155}
   AnimalInspect: {fileID: 763987773}
+  AnimalInspectTransform: {fileID: 0}
   OtherAnimal: {fileID: 1727131419}
   RoomChangeCanvas: {fileID: 1770339494}
   ScanningText: {fileID: 1976297313}
@@ -2835,7 +2872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27b9a5b6b36a33478401c6ccce546ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectSystem
-  objectToInspect: {fileID: 763987772}
   rotationSpeed: 100
 --- !u!114 &1239489551
 MonoBehaviour:
@@ -2849,7 +2885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27b9a5b6b36a33478401c6ccce546ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInspect: {fileID: 538849952}
   rotationSpeed: 100
 --- !u!81 &1239489552
 AudioListener:
@@ -3654,9 +3689,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 1572202967}
   animal: {fileID: 538849951}
   mainCamera: {fileID: 1239489549}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &1744528925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4151,9 +4195,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 1572202967}
   animal: {fileID: 763987773}
   mainCamera: {fileID: 1239489549}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &1900664141
 BoxCollider:
   m_ObjectHideFlags: 0

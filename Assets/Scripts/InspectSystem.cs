@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InspectSystem : MonoBehaviour
 {
-    public Transform objectToInspect;
+    public static Transform objectToInspect;
 
     public float rotationSpeed = 100f;
 
@@ -13,7 +13,6 @@ public class InspectSystem : MonoBehaviour
 
     public void Update()
     {
-
         if(Input.GetMouseButtonDown(0))
         {
             previousMousePosition = Input.mousePosition;

@@ -11,6 +11,8 @@ public class Inspect : MonoBehaviour
     public GameObject Background;
     public GameObject AnimalInspect;
 
+    public Transform AnimalInspectTransform;
+
     public GameObject OtherAnimal;
 
     public GameObject RoomChangeCanvas;
@@ -25,6 +27,8 @@ public class Inspect : MonoBehaviour
 
     private Vector3 currentAnimalPosition;
 
+    InspectSystem InspectSystem;
+
     public void Start()
     {
         currentAnimalPosition = AnimalInspect.transform.position;
@@ -32,6 +36,8 @@ public class Inspect : MonoBehaviour
 
     public void OnMouseDown()
     {
+        InspectSystem.objectToInspect = AnimalInspectTransform;
+
         shutterAnimP();
 
         StartCoroutine(RoomChange());
@@ -66,7 +72,7 @@ public class Inspect : MonoBehaviour
     public void scanningTextAppear()
     {
         ScanningText.SetActive(true);
-        Invoke("scanningTextDisappear", 3f);
+        Invoke("scanningTextDisappear", 3.25f);
     }
 
     public void scanningTextDisappear()

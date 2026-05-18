@@ -259,9 +259,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 1810962745}
   animal: {fileID: 1173314217}
   mainCamera: {fileID: 1788028403}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &157056431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -404,9 +413,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 623581430}
   animal: {fileID: 1173314217}
   mainCamera: {fileID: 1788028403}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &186487728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -877,9 +895,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 1940320048}
   animal: {fileID: 1173314217}
   mainCamera: {fileID: 1788028403}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &283521427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1866,9 +1893,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 623581430}
   animal: {fileID: 1831292000}
   mainCamera: {fileID: 1788028403}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &689788819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2474,9 +2510,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 1940320048}
   animal: {fileID: 1831292000}
   mainCamera: {fileID: 1788028403}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &1137107804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3000,9 +3045,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDiffX: 0.15
   maxDiffZ: 0.02
-  info: {fileID: 1810962745}
   animal: {fileID: 1831292000}
   mainCamera: {fileID: 1788028403}
+  ButtonXcoords: 0
+  ButtonYcoords: 0
+  ButtonZcoords: 0
+  ButtonRotation: 0
+  ButtonScaleX: 0
+  ButtonScaleY: 0
+  ButtonScaleZ: 0
+  textInfo: {fileID: 0}
+  OtherButton1: {fileID: 0}
+  OtherButton2: {fileID: 0}
 --- !u!65 &1325021672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4115,7 +4169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27b9a5b6b36a33478401c6ccce546ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectSystem
-  objectToInspect: {fileID: 1173314216}
   rotationSpeed: 100
 --- !u!114 &1788028405
 MonoBehaviour:
@@ -4129,7 +4182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27b9a5b6b36a33478401c6ccce546ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInspect: {fileID: 1831292001}
   rotationSpeed: 100
 --- !u!81 &1788028406
 AudioListener:
@@ -4427,7 +4479,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5003,6 +5055,7 @@ MonoBehaviour:
   Canvas: {fileID: 891500697}
   Background: {fileID: 1188101223}
   AnimalInspect: {fileID: 1173314217}
+  AnimalInspectTransform: {fileID: 0}
   OtherAnimal: {fileID: 232495576}
   RoomChangeCanvas: {fileID: 1421900677}
   ScanningText: {fileID: 1428794563}

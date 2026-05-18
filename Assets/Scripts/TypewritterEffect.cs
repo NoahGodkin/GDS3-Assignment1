@@ -12,10 +12,6 @@ public class TypewritterEffect : MonoBehaviour
 
     int i = 0;
 
-    void Start()
-    {
-        EndCheck();
-    }
 
     public void EndCheck()
     {
@@ -25,6 +21,13 @@ public class TypewritterEffect : MonoBehaviour
             StartCoroutine(TextVisible());
         }
     }
+
+    private void OnEnable()
+    {
+        i = 0;
+        EndCheck();
+    }
+
 
     public IEnumerator TextVisible()
     {
