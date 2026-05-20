@@ -3339,6 +3339,9 @@ MonoBehaviour:
   animalInspectRoom: {fileID: 5987186}
   sceneRoom: {fileID: 821374493}
   mainCamera: {fileID: 963194227}
+  text1: {fileID: 1872522281}
+  text2: {fileID: 932886329}
+  text3: {fileID: 697316964}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
