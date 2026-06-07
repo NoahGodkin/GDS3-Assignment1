@@ -33,7 +33,8 @@ public class clicked : MonoBehaviour
     public GameObject textInfo;
 
     public GameObject OtherButton1;
-    public GameObject OtherButton2;
+
+    public GameObject ResetModelButton;
 
     void Start()
     {
@@ -51,9 +52,10 @@ public class clicked : MonoBehaviour
         textInfo.SetActive(true);
 
         OtherButton1.SetActive(false);
-        OtherButton2.SetActive(false);
 
         mainCamera.fieldOfView = 20;
+
+        ResetModelButton.SetActive(false);
 
         animal.transform.position = new Vector3(ButtonXcoords, ButtonYcoords, ButtonZcoords); 
 
@@ -64,15 +66,16 @@ public class clicked : MonoBehaviour
         if (clickCount > 1)
         {
             OtherButton1.SetActive(true);
-            OtherButton2.SetActive(true);
 
             animal.transform.position = animalPosition;
 
-            animal.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
+            animal.transform.rotation = Quaternion.Euler(0f, -180f, 0f);
 
             textInfo.SetActive(false);
 
             mainCamera.fieldOfView = 60;
+
+            ResetModelButton.SetActive(true);
 
             inspectSystem.UnFreeze();
 

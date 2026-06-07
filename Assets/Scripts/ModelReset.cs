@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class ModelReset : MonoBehaviour
 {
+    Inspect AnimalRotation;
+
     public void OnMouseDown()
     {
-        ReturnButton.currentAnimal.transform.rotation = Quaternion.Euler(0f, -83.698f, 0f);
+        ReturnButton.currentAnimal.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 }

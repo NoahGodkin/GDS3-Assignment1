@@ -29,6 +29,11 @@ public class Inspect : MonoBehaviour
 
     InspectSystem InspectSystem;
 
+    public AudioSource photoSound;
+    public AudioSource scanningSound;
+
+    public int AnimalRotation;
+
     public void Start()
     {
         currentAnimalPosition = AnimalInspect.transform.position;
@@ -38,6 +43,7 @@ public class Inspect : MonoBehaviour
     {
         InspectSystem.objectToInspect = AnimalInspectTransform;
 
+        photoSound.Play();
         shutterAnimP();
 
         StartCoroutine(RoomChange());
@@ -72,11 +78,13 @@ public class Inspect : MonoBehaviour
     public void scanningTextAppear()
     {
         ScanningText.SetActive(true);
+        scanningSound.Play();
         Invoke("scanningTextDisappear", 3.25f);
     }
 
     public void scanningTextDisappear()
     {
+        photoSound.Play();
         ScanningText.SetActive(false);
     }
 
